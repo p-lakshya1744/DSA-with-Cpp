@@ -1,5 +1,6 @@
 // This program performs linear search in an array
 // Note: Return -1, if element is not found
+// Time Complexity: O(n)
 
 # include <iostream>
 using namespace std;
