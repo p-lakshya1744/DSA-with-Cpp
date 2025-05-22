@@ -2,7 +2,6 @@
 // Note: Return -1, if element is not found
 
 # include <iostream>
-# include <cstdlib>
 using namespace std;
 
 int linearSearch(int array[], int size, int target){
