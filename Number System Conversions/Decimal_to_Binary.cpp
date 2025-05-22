@@ -22,4 +22,6 @@ int main(){
     cin >> num;
 
     cout << "Binary Number: " << decimalToBinary(num) << endl;
+
+    return 0;
 }
