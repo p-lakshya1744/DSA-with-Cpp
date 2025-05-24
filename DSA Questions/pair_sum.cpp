@@ -56,10 +56,9 @@ int main(){
         }
         else{
             cout << start << "," << end << endl;
+            break;
         }
     }
-
-    cout << start << "," << end << endl;
 
     return 0;
 }
