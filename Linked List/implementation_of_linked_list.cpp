@@ -28,29 +28,85 @@ class List{
             Node* temp = head;
 
             while(temp != NULL){
-                cout << temp -> data << " " << endl;
+                cout << temp -> data << " ";
                 temp = temp -> next;
             }
+
+            cout << endl;
         }
 
         void push_front(int val){
             Node* newNode = new Node(val);
             if(head==NULL){
                 head = tail = newNode;
-                newNode -> data = val;
-                newNode -> next = NULL;
             }
             else{
-                
+                newNode -> next = head;
+                head = newNode;
             }
+        }
+
+        void push_back(int val){
+            Node* newNode = new Node(val);
+            if(head==NULL){
+                head = tail = newNode;
+            }
+            else{
+                tail -> next = newNode;
+                tail = newNode;
+            }
+        }
+
+        void pop_front(){
+            if(head==NULL){
+                cout << "Linked List is empty" << endl;
+                return;
+            }
+
+            cout << "Popped Element: " << head -> data << endl;
+            Node* temp = head;
+            head = head -> next;
+            temp -> next = NULL;
+            delete temp; 
+        }
+
+        void pop_back(){
+            if(head==NULL){
+                cout << "Linked List is empty" << endl;
+                return;
+            }
+
+            cout << "Popped Element: " << tail -> data << endl;
+            Node* temp = head;
+            while(temp -> next != tail){
+                temp = temp -> next;
+            }
+            temp -> next = NULL;
+            delete tail;
+            tail = temp;
         }
 };
 
 
 int main(){
 
-    Node n1(10);
+    List LL;
 
+    LL.push_front(0);
+    LL.push_front(-1);
+    LL.push_front(-2);
+    LL.push_front(-3);
 
+    LL.push_back(1);
+    LL.push_back(2);
+    LL.push_back(3);
+
+    LL.printLL();
+
+    LL.pop_front();
+    LL.pop_back();
+
+    LL.printLL();
+    
     return 0;
 }
