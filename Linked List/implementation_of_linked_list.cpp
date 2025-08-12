@@ -85,6 +85,28 @@ class List{
             delete tail;
             tail = temp;
         }
+
+        void insertElement(int val, int pos){
+            if(pos<0){
+                return;
+            }
+            if(pos==0){
+                push_front(val);
+                return;
+            }
+            Node* temp = head;
+            int count = 0;
+            while(temp != NULL){
+                if(count==pos-1){
+                    Node* newNode = new Node(val);
+                    newNode -> next = temp -> next;
+                    temp -> next = newNode;
+                    return;
+                }
+                temp = temp -> next;
+                count++;
+            }
+        }
 };
 
 
@@ -107,6 +129,12 @@ int main(){
     LL.pop_back();
 
     LL.printLL();
+
+    LL.insertElement(5, 5);
+
+    LL.printLL();
+
+
     
     return 0;
 }
