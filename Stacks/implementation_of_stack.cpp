@@ -10,7 +10,17 @@ class Stack{
     public:
     vector <int> v;
 
-    
+    void pushStack(int val){
+        v.push_back(val);
+    }
+
+    void popStack(){
+        v.pop_back();
+    }
+
+    int topStack(){
+        return v.size()-1;
+    }
 };
 
 int main(){
