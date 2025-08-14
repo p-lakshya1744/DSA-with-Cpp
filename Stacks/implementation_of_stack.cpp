@@ -3,9 +3,13 @@
 
 // Implementation using vectors
 # include <iostream>
+# include <vector>
 using namespace std;
 
 class Stack{
+    public:
+    vector <int> v;
+
     
 };
 
