@@ -52,10 +52,36 @@
 using namespace std;
 
 class Stack{
-    
+    public:
+        list <int> ll;
+
+        void pushStack(int val){
+            ll.push_front(val);
+        }
+
+        void popStack(){
+            if(ll.size()!=0){
+                ll.pop_front();
+            }
+            else{
+                cout << "Stack is empty" << endl;
+            }
+        }
+
+        int topStack(){
+            return ll.front();
+        }
+
 };
 
 int main(){
+    Stack s;
+    s.pushStack(10);
+    s.pushStack(10);
+    s.pushStack(10);
 
+    s.topStack();
+
+    s.popStack();
     return 0;
 }
