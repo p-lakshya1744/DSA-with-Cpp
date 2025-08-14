@@ -72,6 +72,12 @@ class Stack{
             return ll.front();
         }
 
+        void travStack(){
+            for(int val: ll){
+                cout << val << " ";
+            }
+        }
+
 };
 
 int main(){
@@ -83,5 +89,7 @@ int main(){
     s.topStack();
 
     s.popStack();
+
+    s.travStack();
     return 0;
 }
