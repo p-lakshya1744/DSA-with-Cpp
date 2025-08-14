@@ -14,16 +14,33 @@ class Stack{
         v.push_back(val);
     }
 
+    void trav(){
+        for(int val : v){
+        cout<< val <<" ";
+        }
+    }
+    
     void popStack(){
-        v.pop_back();
+        if(v.size()!=0){
+            v.pop_back();
+        }
+        else{
+            cout << "Stack is empty" << endl;
+        }
     }
 
     int topStack(){
         return v.size()-1;
     }
+     
 };
 
 int main(){
-
+    Stack s;
+    s.pushStack(10);
+    s.pushStack(12);
+    s.pushStack(10);
+    s.trav();
+    s.popStack();
     return 0;
 }
