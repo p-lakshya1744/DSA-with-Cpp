@@ -2,45 +2,49 @@
 
 
 // Implementation using vectors
-# include <iostream>
-# include <vector>
-using namespace std;
+// # include <iostream>
+// # include <vector>
+// using namespace std;
 
-class Stack{
-    public:
-    vector <int> v;
+// class Stack{
+//     public:
+//     vector <int> v;
 
-    void pushStack(int val){
-        v.push_back(val);
-    }
+//     void pushStack(int val){
+//         v.push_back(val);
+//     }
 
-    void trav(){
-        for(int val : v){
-        cout<< val <<" ";
-        }
-    }
-    
-    void popStack(){
-        if(v.size()!=0){
-            v.pop_back();
-        }
-        else{
-            cout << "Stack is empty" << endl;
-        }
-    }
+//     void travStack(){
+//         for(int val : v){
+//         cout<< val <<" ";
+//         }
+//     }
 
-    int topStack(){
-        return v.size()-1;
-    }
+//     void popStack(){
+//         if(v.size()!=0){
+//             v.pop_back();
+//         }
+//         else{
+//             cout << "Stack is empty" << endl;
+//         }
+//     }
+
+//     int topStack(){
+//         return v.size()-1;
+//     }
      
-};
+// };
 
-int main(){
-    Stack s;
-    s.pushStack(10);
-    s.pushStack(12);
-    s.pushStack(10);
-    s.trav();
-    s.popStack();
-    return 0;
-}
+// int main(){
+//     Stack s;
+//     s.pushStack(10);
+//     s.pushStack(12);
+//     s.pushStack(10);
+//     s.travStack();
+//     s.popStack();
+//     return 0;
+// }
+
+
+// Immplementation using Linked Lists
+
