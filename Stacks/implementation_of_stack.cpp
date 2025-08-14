@@ -47,4 +47,15 @@
 
 
 // Immplementation using Linked Lists
+# include <iostream>
+# include <list>
+using namespace std;
 
+class Stack{
+    
+};
+
+int main(){
+
+    return 0;
+}
