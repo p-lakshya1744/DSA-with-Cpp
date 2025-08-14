@@ -47,49 +47,49 @@
 
 
 // Immplementation using Linked Lists
-# include <iostream>
-# include <list>
-using namespace std;
+// # include <iostream>
+// # include <list>
+// using namespace std;
 
-class Stack{
-    public:
-        list <int> ll;
+// class Stack{
+//     public:
+//         list <int> ll;
 
-        void pushStack(int val){
-            ll.push_front(val);
-        }
+//         void pushStack(int val){
+//             ll.push_front(val);
+//         }
 
-        void popStack(){
-            if(ll.size()!=0){
-                ll.pop_front();
-            }
-            else{
-                cout << "Stack is empty" << endl;
-            }
-        }
+//         void popStack(){
+//             if(ll.size()!=0){
+//                 ll.pop_front();
+//             }
+//             else{
+//                 cout << "Stack is empty" << endl;
+//             }
+//         }
 
-        int topStack(){
-            return ll.front();
-        }
+//         int topStack(){
+//             return ll.front();
+//         }
 
-        void travStack(){
-            for(int val: ll){
-                cout << val << " ";
-            }
-        }
+//         void travStack(){
+//             for(int val: ll){
+//                 cout << val << " ";
+//             }
+//         }
 
-};
+// };
 
-int main(){
-    Stack s;
-    s.pushStack(10);
-    s.pushStack(10);
-    s.pushStack(10);
+// int main(){
+//     Stack s;
+//     s.pushStack(10);
+//     s.pushStack(20);
+//     s.pushStack(30);
 
-    s.topStack();
+//     s.topStack();
 
-    s.popStack();
+//     s.popStack();
 
-    s.travStack();
-    return 0;
-}
+//     s.travStack();
+//     return 0;
+// }
