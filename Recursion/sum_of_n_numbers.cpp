@@ -1,5 +1,8 @@
 // This program calculates sum of n numbers using recursive approach
 
+// Time Complexity - O(n)
+// Space Complexity - O(n)
+
 # include <iostream>
 using namespace std;
 
