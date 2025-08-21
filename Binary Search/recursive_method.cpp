@@ -1,5 +1,8 @@
 // This program performs binary search in a vector in a recursive manner
 
+// Time Complexity - O(log n)
+// Space Complexity - O(n)
+
 # include <iostream>
 # include <vector>
 
