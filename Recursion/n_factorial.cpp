@@ -4,7 +4,7 @@
 using namespace std;
 
 int nFactorial(int n){
-
+    
 }
 
 int main(){
