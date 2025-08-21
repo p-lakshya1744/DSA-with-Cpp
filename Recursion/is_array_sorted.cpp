@@ -6,7 +6,7 @@
 using namespace std;
 
 bool isSorted(vector <int> &nums, int n){
-
+    
 }
 
 int main(){
