@@ -4,7 +4,13 @@
 using namespace std;
 
 int nFactorial(int n){
-    
+    int ans = 1;
+
+    if(n==1){
+        return ans;
+    }
+
+    ans = n * nFactorial(n-1);
 }
 
 int main(){
