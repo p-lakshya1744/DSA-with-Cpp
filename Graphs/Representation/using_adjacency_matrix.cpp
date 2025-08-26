@@ -16,6 +16,8 @@
 using namespace std;
 
 int main(){
-
+    int v;
+    cout << "Enter number of vertices: " << endl;
+    cin >> v;
     return 0;
 }
