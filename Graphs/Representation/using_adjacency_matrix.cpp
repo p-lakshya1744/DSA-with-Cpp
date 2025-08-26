@@ -16,8 +16,17 @@
 using namespace std;
 
 int main(){
-    int v;
+    int vertices;
     cout << "Enter number of vertices: " << endl;
-    cin >> v;
+    cin >> vertices;
+
+    for(int i=0 ; i<vertices ; i++){
+        int u, v;
+        cout << "Enter vertices having edges between them (u, v): " << endl;
+        cin >> u >> v;
+    }
+
+    
+
     return 0;
 }
