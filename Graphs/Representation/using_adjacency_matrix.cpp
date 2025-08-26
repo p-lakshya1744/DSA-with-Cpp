@@ -1,4 +1,4 @@
-// This program implements representation of graphs using adjacence matrix
+// This program implements representation of graphs using adjacency matrix
 
 /*
     Graphs represented:-
