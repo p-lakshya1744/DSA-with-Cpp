@@ -16,17 +16,30 @@
 using namespace std;
 
 int main(){
-    int vertices;
+    int vertices, edges;
+
     cout << "Enter number of vertices: " << endl;
     cin >> vertices;
 
-    for(int i=0 ; i<vertices ; i++){
+    cout << "Enter number of edges: " << endl;
+    cin >> edges;
+
+    vector < vector <bool> > AdjMatrix(vertices, vector <bool> (vertices, 0));
+
+    for(int i=0 ; i<edges ; i++){
         int u, v;
         cout << "Enter vertices having edges between them (u, v): " << endl;
         cin >> u >> v;
+        AdjMatrix[u][v] = 1;
+        AdjMatrix[v][u] = 1;
     }
 
-    vector < vector <bool> > Adjmatrix(vertices, vector <bool> (vertices, 0));
+    for(int i=0 ; i<vertices ; i++){
+        for(int j=0 ; j<vertices ; j++){
+            cout << AdjMatrix[i][j] << " ";
+        }
+        cout << endl;
+    }
 
     return 0;
 }
