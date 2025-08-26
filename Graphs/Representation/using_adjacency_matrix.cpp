@@ -26,7 +26,7 @@ int main(){
         cin >> u >> v;
     }
 
-    
+    vector < vector <bool> > Adjmatrix(vertices, vector <bool> (vertices, 0));
 
     return 0;
 }
