@@ -8,6 +8,9 @@
         Directed Unweighted Graph
 */
 
+// Time Complexity - O(v^2)
+// Space Complexity - O(v^2)
+
 
 // Undirected Unweighted Graph
 # include <iostream>
