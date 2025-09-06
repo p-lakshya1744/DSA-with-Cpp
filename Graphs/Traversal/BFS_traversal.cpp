@@ -11,8 +11,14 @@ vector <int> bfsTraversal(int v, vector <vector <int>> adjList){
 }
 
 int main(){
-    int v;
-    vector <vector <int>> adjList = {};
+    vector <vector <int>> adjList = {{2, 3, 1}, {0}, {0, 4}, {0}, {2}};
+    int v = 5;
 
+    vector <int> result =  bfsTraversal(v, adjList);
+
+    for(int val: result){
+        cout << val << " ";
+    }
+    
     return 0;
 }
