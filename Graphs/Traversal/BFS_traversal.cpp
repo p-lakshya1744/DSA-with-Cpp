@@ -6,8 +6,13 @@
 
 using namespace std;
 
+vector <int> bfsTraversal(int v, vector <vector <int>> adjList){
+
+}
+
 int main(){
-    
+    int v;
+    vector <vector <int>> adjList = {};
 
     return 0;
 }
