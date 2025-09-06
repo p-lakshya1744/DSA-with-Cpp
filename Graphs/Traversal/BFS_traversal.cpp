@@ -7,7 +7,11 @@
 using namespace std;
 
 vector <int> bfsTraversal(int v, vector <vector <int>> adjList){
+    queue <int> q;
+    vector <int> isVisited(v, 0);
+    vector <int> ans;
 
+    
 }
 
 int main(){
@@ -19,6 +23,6 @@ int main(){
     for(int val: result){
         cout << val << " ";
     }
-    
+
     return 0;
 }
