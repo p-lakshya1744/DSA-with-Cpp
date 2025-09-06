@@ -8,7 +8,7 @@ using namespace std;
 
 vector <int> bfsTraversal(int v, vector <vector <int>> adjList){
     queue <int> q;
-    vector <int> isVisited(v, 0);
+    vector <bool> isVisited(v, 0);
     vector <int> ans;
 
     
