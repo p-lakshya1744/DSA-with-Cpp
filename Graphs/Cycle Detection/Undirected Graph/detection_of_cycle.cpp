@@ -65,6 +65,8 @@
 using namespace std;
 
 bool detectCycle(vector <vector <int>> adjList, vector <int> &isVisited){
+    queue <pair<int, int>> q;
+    isVisited[0] = 1;
     
 }
 
