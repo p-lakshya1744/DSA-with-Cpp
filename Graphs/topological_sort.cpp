@@ -19,8 +19,8 @@ void DFS(int node, vector <vector <int>> adjList, vector <int> &isVisited, stack
         if(!isVisited[adjList[node][i]]){
             DFS(adjList[node][i], adjList, isVisited, s);
         }
-        s.push(node);
     }
+    s.push(node);
 } 
 
 vector <int> topoSort(int v, vector <vector <int>> adjList){
@@ -35,7 +35,7 @@ vector <int> topoSort(int v, vector <vector <int>> adjList){
 
     vector <int> ans;
 
-    for(int i=0 ; i<s.size() ; i++){
+    while(!s.empty()){
         ans.push_back(s.top());
         s.pop();
     }
@@ -46,7 +46,7 @@ vector <int> topoSort(int v, vector <vector <int>> adjList){
 int main(){
     int v = 4;
 
-    vector <vector <int>> adjList = {{3, 0}, {1, 0}, {2, 0}};
+    vector <vector <int>> adjList = {{}, {0}, {0}, {0}};
 
     for(int val: topoSort(v, adjList)){
         cout << val << " ";
