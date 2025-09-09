@@ -85,16 +85,22 @@ bool detectCycle(vector <vector <int>> adjList, vector <int> &isVisited){
             isVisited[adjList[node][i]] = 1;
             q.push(make_pair(adjList[node][i], node));
         }
-
-        return false;
         
     }
+
+    return false;
 }
 
 bool isCycle(int v, vector <vector <int>> adjList){
     vector <int> isVisited(v, 0);
 
-    detectCycle(adjList, isVisited);
+    for(int i=0 ; i<v ; i++){
+        if(!isVisited[i] && detectCycle(adjList, isVisited)){
+            return true;
+        }
+    }
+
+     return false;
 }
 
 int main(){
