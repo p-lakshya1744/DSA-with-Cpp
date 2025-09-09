@@ -1,4 +1,4 @@
-// This program detects cycle in a graph using DFS
+// This program detects cycle in an undirected graph using DFS
 
 // Time Complexity - O(V+E)
 // Space Complexity - O(V)
