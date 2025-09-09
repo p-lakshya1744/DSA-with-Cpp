@@ -78,7 +78,9 @@ bool detectCycle(vector <vector <int>> adjList, vector <int> &isVisited){
             if(adjList[node][i]==parentNode){
                 continue;
             }
-            if()
+            if(isVisited[adjList[node][i]]){
+                
+            }
         }
         
     }
