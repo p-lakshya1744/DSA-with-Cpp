@@ -12,14 +12,14 @@
 
 using namespace std;
 
-void DFS(int node, vector <vector <int>> adjList, vector <int> &isVisited, stack <int> s){
+void DFS(int node, vector <vector <int>> adjList, vector <int> &isVisited, stack <int> &s){
     isVisited[node] = 1;
 
     for(int i=0 ; i<adjList[node].size() ; i++){
         if(!isVisited[adjList[node][i]]){
             DFS(adjList[node][i], adjList, isVisited, s);
         }
-        s.push(adjList[node][i]);
+        s.push(node);
     }
 } 
 
@@ -29,7 +29,7 @@ vector <int> topoSort(int v, vector <vector <int>> adjList){
 
     for(int i=0 ; i<v ; i++){
         if(!isVisited[i]){
-            DFS(0, adjList, isVisited, s);
+            DFS(i, adjList, isVisited, s);
         }
     }
 
