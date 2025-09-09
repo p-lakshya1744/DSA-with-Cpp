@@ -1,6 +1,6 @@
 // This program detects cycle in a graph using DFS
 
-// Time Complexity - O(V+2E)
+// Time Complexity - O(V+E)
 // Space Complexity - O(V)
 
 # include <iostream>
