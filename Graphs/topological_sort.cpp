@@ -1,4 +1,4 @@
-// This program Topological Sort on Directed Acyclic Graphs (DAGs)
+// This program Topological Sort on Directed Acyclic Graphs (DAGs) using BFS(Kahn's Algorithm) and DFS
 
 
 // using DFS
