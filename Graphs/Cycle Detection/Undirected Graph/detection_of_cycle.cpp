@@ -63,8 +63,14 @@ int main(){
 
 using namespace std;
 
-int main(){
 
-    
+
+int main(){
+    int v = 5;
+
+    vector <vector <int>> adjList = {{1}, {0, 2, 4}, {1, 3}, {2, 4}, {1, 3}};
+
+    cout << isCycle(v, adjList) << endl;
+
     return 0;
 }
