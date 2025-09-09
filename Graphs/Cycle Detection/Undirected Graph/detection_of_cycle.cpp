@@ -55,8 +55,8 @@
 
 // using BFS
 
-// Time Complexity
-// Space Complexity
+// Time Complexity - O(V+E)
+// Space Complexity - O(V)
 
 # include <iostream>
 # include <vector>
@@ -64,7 +64,14 @@
 using namespace std;
 
 bool detectCycle(int node, int parentNode, vector <vector <int>> adjList, vector <int> isVisited){
+    isVisited[node] = 1;
 
+    for(int i=0 ; i<adjList[node].size() ; i++){
+        if(adjList[node][i]==parentNode){
+            continue;
+        }
+        if()
+    }
 }
 
 bool isCycle(int v, vector <vector <int>> adjList){
