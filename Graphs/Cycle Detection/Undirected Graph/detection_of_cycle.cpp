@@ -1,4 +1,7 @@
-// This program detects cycle in an undirected graph using DFS
+// This program detects cycle in an undirected graph using DFS and BFS
+
+
+// using DFS
 
 // Time Complexity - O(V+E)
 // Space Complexity - O(V)
@@ -8,33 +11,35 @@
 
 using namespace std;
 
-bool detectCycle(int node, int parentNode , vector <vector <int>> adjList, vector <int> isVisited){
-    for(int i=0 ; i<adjList.size() ; i++){
+bool detectCycle(int node, int parentNode , vector <vector <int>> adjList, vector <int> &isVisited){
+    isVisited[node]=1;
+
+    for(int i=0 ; i<adjList[node].size() ; i++){
         if(node==parentNode){
             continue;
         }
         if(isVisited[adjList[node][i]]==1){
-            return 1;
+            return true;
         }
 
         if(detectCycle(adjList[node][i], node, adjList, isVisited)){
-            return 1;
+            return true;
         }
     }
 
-    return 0;
+    return false;
 }
 
 bool isCycle(int v, vector <vector <int>> adjList){
     vector <int> isVisited(v, 0);
 
     for(int i=0 ; i<v ; i++){
-        if(!isVisited[i] && detectCycle(0, -1, adjList, isVisited)){
-            return 1;
+        if(!isVisited[i] && detectCycle(i, -1, adjList, isVisited)){
+            return true;
         }
     }
     
-    return 0;
+    return false;
 }
 
 int main(){
@@ -46,3 +51,6 @@ int main(){
 
     return 0;
 }
+
+
+// 
