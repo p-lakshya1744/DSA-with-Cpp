@@ -6,7 +6,10 @@
 using namespace std;
 
 bool detectCycle(int v, vector <vector <int>> adjList){
-    
+    vector <int> isVisited(v, 0);
+    for(int i=0 ; i<adjList.size() ; i++){
+
+    }
 }
 
 int main(){
