@@ -75,7 +75,10 @@ bool detectCycle(vector <vector <int>> adjList, vector <int> &isVisited){
         q.pop();
 
         for(int i=0 ; i<adjList[node].size() ; i++){
-            
+            if(adjList[node][i]==parentNode){
+                continue;
+            }
+            if()
         }
         
     }
