@@ -9,6 +9,19 @@
 using namespace std;
 
 bool detectCycle(int node, int parentNode , vector <vector <int>> adjList, vector <int> isVisited){
+    for(int i=0 ; i<adjList.size() ; i++){
+        if(node==parentNode){
+            continue;
+        }
+        if(isVisited[adjList[node][i]]==1){
+            return 1;
+        }
+
+        if(detectCycle(adjList[node][i], node, adjList, isVisited)){
+            return 1;
+        }
+    }
+
     
 }
 
