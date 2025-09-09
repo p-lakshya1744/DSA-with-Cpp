@@ -70,6 +70,13 @@ bool detectCycle(vector <vector <int>> adjList, vector <int> &isVisited){
     q.push(make_pair(0, -1));
 
     while(!q.empty()){
+        int node = q.front().first;
+        int parentNode = q.front().second;
+        q.pop();
+
+        for(int i=0 ; i<adjList[node].size() ; i++){
+            
+        }
         
     }
 }
