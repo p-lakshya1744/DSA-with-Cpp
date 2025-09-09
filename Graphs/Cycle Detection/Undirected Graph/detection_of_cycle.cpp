@@ -64,27 +64,14 @@
 
 using namespace std;
 
-bool detectCycle(int node, int parentNode, vector <vector <int>> adjList, vector <int> isVisited){
-    isVisited[node] = 1;
-
-    for(int i=0 ; i<adjList[node].size() ; i++){
-        if(adjList[node][i]==parentNode){
-            continue;
-        }
-        if()
-    }
+bool detectCycle(vector <vector <int>> adjList, vector <int> &isVisited){
+    
 }
 
 bool isCycle(int v, vector <vector <int>> adjList){
     vector <int> isVisited(v, 0);
 
-    for(int i=0 ; i<v ; i++){
-        if(!isVisited[i] && detectCycle(i, -1, adjList, isVisited)){
-            return true;
-        }
-    }
-
-    return false;
+    detectCycle(adjList, isVisited);
 }
 
 int main(){
