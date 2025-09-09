@@ -5,6 +5,10 @@
 
 using namespace std;
 
+bool detectCycle(int node, int parent, vector <vector <int>> adjList, vector <int> isVisited){
+
+}
+
 int main(){
     
 
