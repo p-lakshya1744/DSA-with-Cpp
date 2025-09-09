@@ -22,13 +22,19 @@ bool detectCycle(int node, int parentNode , vector <vector <int>> adjList, vecto
         }
     }
 
-    
+    return 0;
 }
 
 bool isCycle(int v, vector <vector <int>> adjList){
     vector <int> isVisited(v, 0);
+
+    for(int i=0 ; i<v ; i++){
+        if(!isVisited[i] && detectCycle(0, -1, adjList, isVisited)){
+            return 1;
+        }
+    }
     
-    return detectCycle(0, -1, adjList, isVisited);
+    return 0;
 }
 
 int main(){
