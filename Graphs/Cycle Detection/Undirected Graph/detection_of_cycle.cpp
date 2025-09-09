@@ -79,9 +79,14 @@ bool detectCycle(vector <vector <int>> adjList, vector <int> &isVisited){
                 continue;
             }
             if(isVisited[adjList[node][i]]){
-                
+                return true;
             }
+
+            isVisited[adjList[node][i]] = 1;
+            q.push(make_pair(adjList[node][i], node));
         }
+
+        return false;
         
     }
 }
