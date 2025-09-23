@@ -41,10 +41,17 @@ class Queue{
             Node* temp = head;
             head = head -> next;
             delete temp;
+            if(head==NULL){
+                tail = NULL;
+            }
         }
     }
 
     int front(){
+        if(isEmpty()){
+            cout << "LL is empty" << endl;
+            return -1;
+        }
         return head -> data;
     }
 
