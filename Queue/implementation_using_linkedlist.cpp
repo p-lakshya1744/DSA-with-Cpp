@@ -17,7 +17,27 @@ class Node{
 };
 
 class Queue{
-    
+    Node* head = NULL;
+    Node* tail = NULL;
+
+    public:
+
+    void push(int data){
+
+    }
+
+    void pop(){
+
+    }
+
+    int front(){
+
+    }
+
+    bool isEmpty(){
+        
+    }
+
 };
 
 int main(){
