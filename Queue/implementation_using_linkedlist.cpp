@@ -24,7 +24,7 @@ class Queue{
 
     void push(int data){
         Node* newNode = new Node(data);
-        if(isEmpty()){
+        if(empty()){
             head = tail = newNode;
         }
         else{
@@ -34,7 +34,7 @@ class Queue{
     }
 
     void pop(){
-        if(isEmpty()){
+        if(empty()){
             cout << "LL is empty" << endl;
         }
         else{
@@ -48,14 +48,14 @@ class Queue{
     }
 
     int front(){
-        if(isEmpty()){
+        if(empty()){
             cout << "LL is empty" << endl;
             return -1;
         }
         return head -> data;
     }
 
-    bool isEmpty(){
+    bool empty(){
         if(head==NULL && tail==NULL){
             return true;
         }
@@ -71,7 +71,7 @@ int main(){
     q.push(2);
     q.push(3);
 
-    while(!(q.isEmpty())){
+    while(!(q.empty())){
         cout << q.front() << " ";
         q.pop();
     }
