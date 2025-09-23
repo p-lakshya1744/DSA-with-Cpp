@@ -23,7 +23,10 @@ class Queue{
     public:
 
     void push(int data){
-
+        Node* newNode = new Node(data);
+        if(isEmpty()){
+            
+        }
     }
 
     void pop(){
@@ -35,7 +38,10 @@ class Queue{
     }
 
     bool isEmpty(){
-        
+        if(head==NULL && tail==NULL){
+            return true;
+        }
+        return false;
     }
 
 };
