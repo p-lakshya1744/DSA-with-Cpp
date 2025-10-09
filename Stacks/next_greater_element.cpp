@@ -1,5 +1,8 @@
 // This program finds the next greater element for any element in a vector
 
+// Time Complexity - O(n)
+// Space Complexity - O(n)
+
 # include <iostream>
 # include <vector>
 # include <stack>
