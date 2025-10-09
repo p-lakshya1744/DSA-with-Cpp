@@ -30,12 +30,87 @@ stockSpanner.next(85);  // return 6
  
 */
 
+// Brute Force Approach
+// # include <iostream>
+// # include <vector>
+// # include <stack>
+
+// using namespace std;
+
+// class StockSpanner {
+// public:
+//     vector <int> prices;
+//     StockSpanner() {
+//         prices = {};
+//     }
+    
+//     int next(int price) {
+//         prices.push_back(price);
+
+//         int count = 1;
+
+//         for(int i=prices.size()-2 ; i>=0 ; i--){
+//             if(prices[i]<=price){
+//                 count++;
+//             }
+//             else{
+//                 break;
+//             }
+//         }
+
+//         return count;
+//     }
+// };
+
+// int main(){
+
+
+//     return 0;
+// }
+
+
+// Optimized Approach using stack
 # include <iostream>
 # include <vector>
 # include <stack>
 
 using namespace std;
 
+class StockSpanner {
+public:
+    vector <int> prices;
+    stack <pair <int, int>> s;
+    int idx = -1;
+    StockSpanner() {
+        prices = {};
+        idx = -1;
+        s = {};
+    }
+    
+    int next(int price) {
+        prices.push_back(price);
+        int ans = 0;
+        idx += 1;
+
+        while(s.size()>0 && s.top().first<=price){
+            s.pop();
+        }
+
+        if(s.empty()){
+            ans = idx + 1;
+        }
+        else{
+            ans = idx - s.top().second;
+        }
+
+        s.push({price, idx});
+
+        return ans;
+    }
+};
+
 int main(){
+
+
     return 0;
 }
