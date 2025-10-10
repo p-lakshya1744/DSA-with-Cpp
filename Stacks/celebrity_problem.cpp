@@ -7,6 +7,10 @@ Return the index of the celebrity, if there is no celebrity return -1.
 
 */
 
+
+// Time Complexity - O(n)
+// Space Complexity - O(n)
+
 # include <iostream>
 # include <vector>
 # include <stack>
@@ -44,7 +48,7 @@ int getCelebrity(vector <vector <int>> arr){
     }
 
     return celeb;
-    
+
 };
 
 int main(){
