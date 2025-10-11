@@ -1,5 +1,8 @@
 // This program builds a tree using given preorder sequence
 
+
+// Time Complexity - O(n)
+
 # include <iostream>
 # include <vector>
 
