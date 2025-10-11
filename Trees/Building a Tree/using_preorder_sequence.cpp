@@ -39,5 +39,11 @@ Node* buildTree(vector <int> preorder){
 int main(){
     vector <int> preorder = {1, 2, -1, -1, 3, 4, -1, -1, 5, -1, -1};
 
+    Node* root = buildTree(preorder);
+
+    cout << root -> data << endl;
+    cout << root -> left -> data << endl;
+    cout << root -> right -> data << endl;
+
     return 0;
 }
