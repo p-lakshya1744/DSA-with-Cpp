@@ -1,5 +1,7 @@
 // This program implements the inorder traversal for a binary tree
 
+// Time Complexity - O(n)
+
 # include <iostream>
 # include <vector>
 
