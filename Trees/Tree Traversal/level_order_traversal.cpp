@@ -43,12 +43,24 @@ void levelorderTraversal(Node* root){
     queue <Node*> q;
 
     q.push(root);
+    q.push(NULL);
 
     while(!q.empty()){
         Node* currNode = q.front();
         q.pop();
 
-        cout << currNode -> data << endl;
+        if(currNode==NULL){
+            if(!q.empty()){
+                cout << endl;
+                q.push(NULL);
+                continue;
+            }
+            else{
+                break;
+            }
+        }
+
+        cout << currNode -> data << " ";
 
         if(currNode -> left != NULL){
             q.push(currNode -> left);
